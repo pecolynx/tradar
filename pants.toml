@@ -1,2 +1,18 @@
 [GLOBAL]
 pants_version = "2.14.1"
+
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.python.lint.bandit",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.docformatter",
+  "pants.backend.python.lint.flake8",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.lint.pylint",
+]
+
+[black]
+version = "black==22.10.0"
+config = "python/build-support/pyproject.toml"
+lockfile = "python/build-support/black_lockfile.txt"
+
